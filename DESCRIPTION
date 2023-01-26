@@ -1,11 +1,22 @@
 Package: stin370
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Functions and data for STIN370, NMBU
 Version: 0.1.0
-Author: Who wrote it
+Authors@R: c(
+    person("Thore", "Egeland", , "thore.egeland@nmbu.no", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-3465-8885"))
+  )
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Functions and data, used in the course STIN370. The library supplements Canvas.
+License: GPL-3
+URL: https://github.com/thoree/stin370
+BugReports: https://github.com/thoree/stin370/issues
+Depends: 
+    R (>= 4.1.0),
+    pedtools (>= 1.2.0)
+Imports: 
+    forrel (>= 1.4.0),
+    pedprobr (>= 0.6.0)
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.3
