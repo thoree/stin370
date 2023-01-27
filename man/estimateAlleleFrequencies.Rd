@@ -15,7 +15,7 @@ estimateAlleleFrequencies(x, markers = NULL)
 A list, eachelement containing allele frequencies
 }
 \description{
-A wrapper for `genetics:::summary.genotype`.
+A wrapper for genetics:::summary.genotype.
 }
 \examples{
 db = simulateUnrelated(nInd = 100, nMark = 2, seed = 1729)
