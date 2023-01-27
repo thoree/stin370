@@ -32,3 +32,59 @@ if(!require(devtools)) install.packages("devtools")
 devtools::install_github("thoree/stin370")
 ```
 
+## Load libraries
+
+```{r}
+library(stin370, quietly = T)
+```
+
+```{r, eval = F}
+library(genetics, quietly = T) # May generate warnings
+```
+
+```{r, echo = F}
+suppressWarnings(suppressMessages(library(genetics, quietly = T)))
+```
+
+## Simulate data from unrelated individuals
+
+```{r}
+nInd = 100
+db = simulateUnrelated(nInd = nInd, nMark = 2, alleles = 1:2,
+                       afreq = c(0.4, 0.6), seed = 1729)
+```
+
+## Estimate allele frequencies
+
+Extract and show some genotypes from first marker
+
+
+```{r}
+(res = estimateAlleleFrequencies(db, markers = 1))
+```
+
+
+## HWE test 
+
+There are many options, e.g.,
+
+```{r}
+g = getGenotypes(db)
+g1 = genotype(g[,1])
+(test1 = HWE.chisq(g1))
+```
+Checking test-statistic
+
+```{r}
+p1 = 0.355
+p2 = 0.645
+expected = nInd *c(p1^2, 2*p1*p2, p2^2)
+observed = c(10, 51, 39)
+df = data.frame(genotype = c("1/1", "1/2", "2/2"), observed, expected)
+df
+```
+
+```{r}
+sum((observed -expected)^2/expected)
+```
+

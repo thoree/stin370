@@ -24,7 +24,6 @@ Simulated half sib ped.
 Simulates data for half sibs
 }
 \examples{
-library(pedsuite)
 comp2Data(seed = 1729)
 
 }
