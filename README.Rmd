@@ -87,4 +87,16 @@ df
 ```{r}
 sum((observed -expected)^2/expected)
 ```
+## Multiple testing
 
+```{r}
+nInd = 100
+nMark = 2
+db = simulateUnrelated(nInd = nInd, nMark = nMark, alleles = 1:2,
+                       afreq = c(0.4, 0.6), seed = 1729)
+g = getGenotypes(db)
+ps = apply(g, 2, function(x){ 
+  g1 = genotype(x)
+  HWE.chisq(x)$p.value
+  })
+```

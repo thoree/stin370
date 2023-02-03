@@ -28,7 +28,7 @@ estimateAlleleFrequencies = function(x, markers = NULL){
   res = list()
   j = 0
   for(i in loopOver){
-    g1 = genetics:::genotype(g[,i])
+    g1 = genetics:::genotype(g[,i], reorder = "no")
     j = j+1
     res[[j]]= genetics:::summary.genotype(g1)$allele.freq
   }
