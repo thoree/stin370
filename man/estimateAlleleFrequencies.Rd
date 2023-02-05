@@ -12,7 +12,7 @@ estimateAlleleFrequencies(x, markers = NULL)
 \item{markers}{If `NULL`, results are given for all markers}
 }
 \value{
-A list, eachelement containing allele frequencies
+A list, each element containing allele frequencies
 }
 \description{
 A wrapper for genetics:::summary.genotype.
