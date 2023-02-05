@@ -2,4 +2,6 @@
 
 export(comp2Data)
 export(estimateAlleleFrequencies)
+export(halfSibPedSim)
+export(mleSNP)
 export(simulateUnrelated)
