@@ -5,7 +5,7 @@
 #' @param x a ped object or a list of such
 #' @param markers If `NULL`, results are given for all markers
 
-#' @return A list, eachelement containing allele frequencies
+#' @return A list, each element containing allele frequencies
 #' 
 #' @examples 
 #' db = simulateUnrelated(nInd = 100, nMark = 2, seed = 1729)
